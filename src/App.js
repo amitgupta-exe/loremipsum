@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
-  const Alphabet = ["a", "b", "c", "d", " ", "e", "f", "g", "h", "i", " ", "j", "k", "l", "m", " ", "n", "o", "p", " ", "q", "r", "s", " ", "t", "u", "v", "w", " ", "x", "y", "z", " "];
+  const Alphabet = ["a", "b", "c", "d", " ", "e", "f", "g", "h", "i", " ", "j", "k", "l", "m", " ", "n", "o", "p", " ", "q", "r", "s", " ", "t", "u", "v", "w", " ", "x", "y", "z"];
 
 
   const [count, setCount] = useState(100);
@@ -15,17 +15,22 @@ const App = () => {
 
   const generateLorem = (e) => {
 
-e.preventDefault();
-    var Text = [];
+    e.preventDefault();
 
-    for (let i = 0; i < (count * 4); i++) {
+    var Paragraph = [];
+    var Word = [];
 
-      Text[i] = Alphabet[Math.floor(Math.random() * Alphabet.length)]
+    for (let i = 0; i <= count; i = i + 2) {
+      for (let j = 0; j <= (Math.random() * 10); j++) {
+        Word[j] = Alphabet[Math.floor(Math.random() * 26)]
+      }
+      Paragraph[i] = Word;
+      Paragraph[i + 1] = " ";
+      Word=[];
     }
 
-    console.log(Text);
-
-    setText(Text);
+    console.log(Paragraph);
+    setText(Paragraph);
   }
 
 
@@ -35,7 +40,7 @@ e.preventDefault();
         <h1 className="">Lorem Ipsum Generator</h1>
       </div>
       <form className="d-flex justify-content-center py-2">
-        <input onChange={(e) => {setCount(e.target.value)}} value={count} type="number" className="w-10" />
+        <input onChange={(e) => { setCount(e.target.value) }} value={count} type="number" className="w-10" />
         <button onClick={generateLorem} className="btn-secondary">Generate</button>
       </form>
       <div className="text-center ">
