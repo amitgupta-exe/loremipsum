@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 
-  const Alphabet = ["a", "b", "c", "d", " ", "e", "f", "g", "h", "i", " ", "j", "k", "l", "m", " ", "n", "o", "p", " ", "q", "r", "s", " ", "t", "u", "v", "w", " ", "x", "y", "z"];
+  const Alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i",  "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",  "x", "y", "z", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u", "a", "e", "i", "o", "u",];
 
 
   const [count, setCount] = useState(100);
@@ -18,20 +18,39 @@ const App = () => {
     e.preventDefault();
 
     var Paragraph = [];
+    var Sentence = [];
     var Word = [];
+  
+    // for (let i = 0; i <= count; i = i + 2) {
+    //   for (let j = 0; j <= (Math.random() * 10); j++) {
+    //     Word[j] = Alphabet[Math.floor(Math.random() * 26)]
+    //   }
+    //   Paragraph[i] = Word;
+    //   Paragraph[i + 1] = " ";
+    //   Word=[];
+    // }
 
-    for (let i = 0; i <= count; i = i + 2) {
-      for (let j = 0; j <= (Math.random() * 10); j++) {
-        Word[j] = Alphabet[Math.floor(Math.random() * 26)]
+    for (let i = 0; i <= 1000; i=i+2) {
+      for (let j = 0; j <= (Math.floor(Math.random()*5 + 20)); j=j+2) {
+        for (let k = 0; k <= (Math.floor(Math.random()*10)); k++) {
+            Word[k] = Alphabet[Math.floor(Math.random() * Alphabet.length)]; 
+        }
+        Sentence[j] = Word;
+        Sentence[j + 1] = " ";
+        Word=[];
       }
-      Paragraph[i] = Word;
-      Paragraph[i + 1] = " ";
-      Word=[];
+      Sentence[Sentence.length-1] = '. ';
+      Sentence[0][0] = Sentence[0][0].toUpperCase();
+      Paragraph[i] = Sentence;
+  
+      Sentence=[];
     }
 
     console.log(Paragraph);
     setText(Paragraph);
   }
+
+  
 
 
   return (
