@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/loremipsum/static/css/main.06865c3a.chunk.css",
+    "main.js": "/loremipsum/static/js/main.21de072c.chunk.js",
+    "main.js.map": "/loremipsum/static/js/main.21de072c.chunk.js.map",
+    "runtime-main.js": "/loremipsum/static/js/runtime-main.a4887960.js",
+    "runtime-main.js.map": "/loremipsum/static/js/runtime-main.a4887960.js.map",
+    "static/css/2.f2512455.chunk.css": "/loremipsum/static/css/2.f2512455.chunk.css",
+    "static/js/2.0be40250.chunk.js": "/loremipsum/static/js/2.0be40250.chunk.js",
+    "static/js/2.0be40250.chunk.js.map": "/loremipsum/static/js/2.0be40250.chunk.js.map",
+    "static/js/3.bda9423f.chunk.js": "/loremipsum/static/js/3.bda9423f.chunk.js",
+    "static/js/3.bda9423f.chunk.js.map": "/loremipsum/static/js/3.bda9423f.chunk.js.map",
+    "index.html": "/loremipsum/index.html",
+    "static/css/2.f2512455.chunk.css.map": "/loremipsum/static/css/2.f2512455.chunk.css.map",
+    "static/css/main.06865c3a.chunk.css.map": "/loremipsum/static/css/main.06865c3a.chunk.css.map",
+    "static/js/2.0be40250.chunk.js.LICENSE.txt": "/loremipsum/static/js/2.0be40250.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a4887960.js",
+    "static/css/2.f2512455.chunk.css",
+    "static/js/2.0be40250.chunk.js",
+    "static/css/main.06865c3a.chunk.css",
+    "static/js/main.21de072c.chunk.js"
+  ]
+}
